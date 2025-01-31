@@ -1,0 +1,32 @@
+* {
+    font-family: sans-serif;
+    background-color: rgb(0, 187, 255);
+    text-align: center;
+    
+}
+
+input {
+    border: 2px solid white;
+    margin: 1vh;
+    padding: 0.5vh 2vh 0.5vh 2vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.underskrift {
+    font-size: 2.5vh;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+
+    
+}
+img {
+    width: 70vh;
+    margin: 5vh;
+}
