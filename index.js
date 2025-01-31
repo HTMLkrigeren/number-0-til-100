@@ -2,9 +2,10 @@ function tall1Til100() {
     let riktigTall = Math.round(Math.random()*100);
     let lykke = document.getElementById("lykke");
     let sjekk = document.getElementById("sjekk");
-    
+    var forsok = 0;
     
     sjekk.onclick = function () {
+        forsok++;
         let input = document.getElementById("numberInput").value;
         let nærme = document.getElementById("kaltEllerVarm")
         console.log(riktigTall);
@@ -17,7 +18,7 @@ function tall1Til100() {
             nærme.textContent = "for høyt " + input + " er større en tallet"
         } else if (input == riktigTall) {
             nærme.textContent = "Riktiggg!!"
-            alert("gratulerer, " + input + " er riktig tall")
+            alert("gratulerer, det tok deg " + forsok + " forsøk, før du fikk svaret " + input)
 
             let spørsmål = confirm("har du lyst å prøve en gang til?");
 
@@ -30,13 +31,14 @@ function tall1Til100() {
         }
     }
     lykke.onclick = function () {
+        forsok++;
         console.log(riktigTall);
         let nærme = document.getElementById("kaltEllerVarm")
         let random = Math.round(Math.random()*100)
 
         if (random == riktigTall) {
             nærme.textContent = "Riktiggg!!"
-            alert("gratulerer, " + random + " er riktig tall")
+            alert("gratulerer, " + random + " er riktig tall, det tok " + forsok + " forsøk")
 
             let spørsmål = confirm("har du lyst å prøve en gang til?");
 
